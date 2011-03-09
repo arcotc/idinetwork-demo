@@ -1,4 +1,4 @@
-package uk.co.arcotc.samples.springmvc;
+package uk.co.idinetwork.core.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +10,7 @@ public class IndexController {
 	public static final String CONTROLLER_MAPPING = "/";
 	
 	@RequestMapping(value=CONTROLLER_MAPPING, method=RequestMethod.GET)
-	public ModelAndView Index() {
+	public ModelAndView index() {
 		return new ModelAndView("index");
 	}
 	
