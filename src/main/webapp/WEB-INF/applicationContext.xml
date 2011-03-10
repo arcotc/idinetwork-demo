@@ -13,17 +13,5 @@
 	<tx:annotation-driven />
 
 	<bean id="instructorService" class="uk.co.idinetwork.core.service.InstructorServiceImpl" />
-	<bean id="instructorRepository"
-		class="uk.co.idinetwork.core.repository.InstructorRepositoryImpl" />
-
-	<!-- JDO Specific -->
-	<bean id="persistenceManagerFactory"
-		class="org.springframework.orm.jdo.LocalPersistenceManagerFactoryBean">
-		<property name="persistenceManagerFactoryName" value="transactions-optional" />
-	</bean>
-
-	<bean id="transactionManager" class="org.springframework.orm.jdo.JdoTransactionManager">
-		<property name="persistenceManagerFactory" ref="persistenceManagerFactory" />
-	</bean>
-	<!-- End JDO Specific -->
+	<bean id="instructorRepository" class="uk.co.idinetwork.core.repository.InstructorRepositoryImpl" />
 </beans>
