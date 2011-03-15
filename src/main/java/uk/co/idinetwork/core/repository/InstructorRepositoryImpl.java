@@ -1,25 +1,21 @@
 package uk.co.idinetwork.core.repository;
 
-import javax.jdo.PersistenceManager;
+import java.util.List;
 
 import uk.co.idinetwork.core.model.Instructor;
 
 public class InstructorRepositoryImpl implements InstructorRepository {
 	@Override
 	public Instructor findInstructor(String instructorId) {
-		return new Instructor("Stuart", "Lancaster", "abc1234");
+		List<Instructor> instructors = Instructor.all().filter("id", instructorId).fetch();
+		return instructors.size() > 0 ? instructors.get(0) : null;
 	}
 	
 	@Override
 	public Instructor saveInstructor(String forename, String surname, String adiCode) {
 		Instructor instructor = new Instructor(forename, surname, adiCode);
 		
-		PersistenceManager pm = PersistenceManagerFactoryManager.getInstance().getPersistenceManager();
-        try {
-            pm.makePersistent(instructor);
-        } finally {
-            pm.close();
-        }
+		instructor.insert();
 		
 		return instructor;
 	}

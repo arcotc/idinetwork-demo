@@ -1,26 +1,20 @@
-package uk.co.idinetwork.core.model;
+package uk.co.idinetwork.core.model.json;
 
-import siena.Id;
-import siena.Model;
-import siena.Query;
+import uk.co.idinetwork.core.model.Instructor;
 
-public class Instructor extends Model {
-	@Id
+public class JsonInstructor {
 	private Long id;
 	private String forename;
 	private String surname;
 	private String adiCode;
 
-	public Instructor() {
-		// Empty - default constructor
+	public JsonInstructor(Instructor instructor) {
+		this.id = instructor.getId();
+		this.forename = instructor.getForename();
+		this.surname = instructor.getSurname();
+		this.adiCode = instructor.getAdiCode();
 	}
-	
-	public Instructor(String forename, String surname, String adiCode) {
-		this.forename = forename;
-		this.surname = surname;
-		this.adiCode = adiCode;
-	}
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -51,14 +45,5 @@ public class Instructor extends Model {
 
 	public void setAdiCode(String adiCode) {
 		this.adiCode = adiCode;
-	}
-	
-	@Override
-	public String toString() {
-		return "Instructor {" + id + ", " + forename + ", " + surname + ", " + adiCode + "}";
-	}
-	
-	public static Query<Instructor> all() {
-		return all(Instructor.class);
 	}
 }

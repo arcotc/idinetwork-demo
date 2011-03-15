@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import uk.co.idinetwork.core.model.Instructor;
 import uk.co.idinetwork.core.model.JsonResponse;
+import uk.co.idinetwork.core.model.json.JsonInstructor;
 import uk.co.idinetwork.core.service.InstructorService;
 
 @Controller
@@ -21,7 +22,7 @@ public class InstructorJsonController {
 	public ModelAndView findInstructor(@PathVariable("adiCode") String adiCode) {
 		Instructor instructor = instructorService.findInstructor(adiCode);
 		
-		ModelAndView modelAndView = new ModelAndView("jsonView", "response", new JsonResponse<Instructor>(JsonResponse.OK, instructor));
+		ModelAndView modelAndView = new ModelAndView("jsonView", "response", new JsonResponse<JsonInstructor>(JsonResponse.OK, new JsonInstructor(instructor)));
 		
 		return modelAndView;
 	}
