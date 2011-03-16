@@ -12,6 +12,8 @@
 
 	<tx:annotation-driven />
 
+	<bean id="articleService" class="uk.co.idinetwork.core.service.ArticleServiceImpl" />
+	<bean id="articleRepository" class="uk.co.idinetwork.core.repository.ArticleRepositoryImpl" />
 	<bean id="instructorService" class="uk.co.idinetwork.core.service.InstructorServiceImpl" />
 	<bean id="instructorRepository" class="uk.co.idinetwork.core.repository.InstructorRepositoryImpl" />
 </beans>
