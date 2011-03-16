@@ -29,3 +29,14 @@ a:active {
 }
 .style2 {color: #005083;}
 .style3 {color: #B7B7B7}
+.style4 {color: #000000}
+.style5 {
+	color: #005083;
+	align: right;
+}
+
+.pageTitle {
+	color: #b91111;
+	font-size: 20px;
+	font-family: tahoma;
+}

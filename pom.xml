@@ -19,7 +19,7 @@
 
 		<jettyVersion>7.2.0.v20101020</jettyVersion>
 
-		<gae.home>d:/java/appengine-java-sdk-1.4.2</gae.home>
+		<gae.home>/home/mhunter/appengine-java-sdk-1.4.0/</gae.home>
 	</properties>
 
 	<pluginRepositories>
@@ -172,6 +172,11 @@
 			<artifactId>appengine-api-1.0-sdk</artifactId>
 			<version>1.4.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.tuckey</groupId>
+			<artifactId>urlrewritefilter</artifactId>
+			<version>3.1.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -243,6 +248,13 @@
 				<groupId>net.kindleit</groupId>
 				<artifactId>maven-gae-plugin</artifactId>
 				<version>0.8.1</version>
+				<configuration>
+					<port>9991</port>
+					<jvmFlags>
+						<jvmFlag>-Xdebug</jvmFlag>
+						<jvmFlag>-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000</jvmFlag>
+					</jvmFlags>
+				</configuration>
 			</plugin>
 
 			<plugin>

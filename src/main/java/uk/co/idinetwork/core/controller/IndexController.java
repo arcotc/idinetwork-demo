@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class IndexController {
-	public static final String CONTROLLER_MAPPING = "/";
+	public static final String CONTROLLER_MAPPING = "/home";
 	
 	@RequestMapping(value=CONTROLLER_MAPPING, method=RequestMethod.GET)
 	public ModelAndView index() {
