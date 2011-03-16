@@ -60,21 +60,21 @@
 		                    <td width="25"><img src="/static/images/spacer.gif" width="20" height="8"></td>
 		                    <td width="175"><table width="175" border="0" cellspacing="5" cellpadding="0">
 		                      <tr>
-		                        <td class="style2"><a href="/article/article1" class="style2">www.lobortissecun.dum</a></td>
+		                        <td class="style2"><a href="/article/article1" class="style2">Article 1 Title</a></td>
 		                      </tr>
 		                      <tr>
 		                      	<td class="style4">
 		                      		Iaceo persto foras iriure valetudoto indoles exerci. Ut, letalis iriure importunus. 
-		                      		<span class="style5">read more ...</span>
+		                      		<a href="/article/article1" class="style5">read more ...</a>
 		                      	</td>
 		                      </tr>
 		                      <tr>
-		                        <td class="style2"><a href="/article/article2" class="style2">www.iriure.decet.mo</a></td>
+		                        <td class="style2"><a href="/article/article2" class="style2">Article 2 Title</a></td>
 		                      </tr>
 		                      <tr>
 		                      	<td class="style4">
 		                      		Iaceo persto foras iriure valetudoto indoles exerci. Ut, letalis iriure importunus. 
-		                      		<span class="style5">read more ...</span>
+		                      		<a href="/article/article2" class="style5">read more ...</a>
 		                      	</td>
 		                      </tr>
 		                    </table></td>
