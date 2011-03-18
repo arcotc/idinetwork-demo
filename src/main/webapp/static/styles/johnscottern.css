@@ -40,3 +40,22 @@ a:active {
 	font-size: 20px;
 	font-family: tahoma;
 }
+
+.bannerTitle {
+	color: #ffffff;
+	font-size: 25px;
+	font-family: tahoma;
+	font-style: italic;
+	position:absolute;
+	left:361px;
+	top:43px;
+}
+
+.bannerSubTitle {
+	color: #ffffff;
+	font-size: 14px;
+	font-family: tahoma;
+	position:absolute;
+	left:361px;
+	top:77px;
+}

@@ -19,4 +19,9 @@ public class ArticleServiceImpl implements ArticleService {
 	public Article saveArticle(String pageTitle, String title, String summary, String copy) {
 		return articleRepository.saveArticle(pageTitle, title, summary, copy);
 	}
+	
+	@Override
+	public Article findArticleByPageTitle(String pageTitle) {
+		return articleRepository.findArticleByPageTitle(pageTitle);
+	}
 }

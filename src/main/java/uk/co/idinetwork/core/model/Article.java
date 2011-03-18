@@ -1,5 +1,7 @@
 package uk.co.idinetwork.core.model;
 
+import java.util.Date;
+
 import siena.Id;
 import siena.Model;
 import siena.Query;
@@ -11,6 +13,7 @@ public class Article extends Model {
 	private String title;
 	private String intro;
 	private String copy;
+	private Date dateCreated;
 
 	public Article() {
 		// Empty - default constructor
@@ -61,6 +64,14 @@ public class Article extends Model {
 	
 	public String getCopy() {
 		return copy;
+	}
+	
+	public void setDateCreated(Date dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+	
+	public Date getDateCreated() {
+		return dateCreated;
 	}
 	
 	@Override

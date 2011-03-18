@@ -8,4 +8,6 @@ public interface ArticleRepository {
 	public List<Article> findAllArticles();
 
 	public Article saveArticle(String pageTitle, String title, String summary, String copy);
+
+	public Article findArticleByPageTitle(String pageTitle);
 }
