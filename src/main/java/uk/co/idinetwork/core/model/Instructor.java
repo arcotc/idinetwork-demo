@@ -5,8 +5,7 @@ import siena.Model;
 import siena.Query;
 
 public class Instructor extends Model {
-	@Id
-	private Long id;
+	@Id	private Long id;
 	private String forename;
 	private String surname;
 	private String adiCode;

@@ -8,19 +8,26 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import uk.co.idinetwork.core.model.Article;
-import uk.co.idinetwork.core.service.ArticleService;
+import uk.co.idinetwork.core.service.BloggerService;
+
+import com.google.gdata.client.GoogleService;
 
 @Controller
 public class ArticlePageController {
-	public static final String CONTROLLER_MAPPING = "/article/{pageTitle}";
-	
-	@Autowired private ArticleService articleService;
+	public static final String CONTROLLER_MAPPING = "/article/{articleKey}";
+	@Autowired private BloggerService articleService;
 	
 	@RequestMapping(value=CONTROLLER_MAPPING, method=RequestMethod.GET)
-	public ModelAndView firstLevelPage(@PathVariable ("pageTitle") String pageTitle) {
-		Article article = articleService.findArticleByPageTitle(pageTitle);
+	public ModelAndView firstLevelPage(@PathVariable ("articleKey") String articleKey) {
+		ModelAndView modelAndView = new ModelAndView("articlePage");
+
+		GoogleService myService = new GoogleService("blogger", "continuing-to-learning");
+		Article article = articleService.loadUserBlog(myService, articleKey);
 		
-		return new ModelAndView("articlePage", "article" , article);
+		modelAndView.addObject("article" , article);
+		modelAndView.addObject("articles" , articleService.loadUserBlogs(myService));
+		
+		return modelAndView;
 	}
 	
 	@RequestMapping(value=CONTROLLER_MAPPING, method=RequestMethod.POST)
