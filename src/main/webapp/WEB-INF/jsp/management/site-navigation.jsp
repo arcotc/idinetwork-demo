@@ -58,5 +58,7 @@
 				</td>
 			</tr>
 		</table>
+		<br/>
+		Return to <a href="/site/management">management menu</a>.
 	</body>
 </html>

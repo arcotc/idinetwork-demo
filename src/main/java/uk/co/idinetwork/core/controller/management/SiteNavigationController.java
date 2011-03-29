@@ -15,6 +15,7 @@ import uk.co.idinetwork.core.utils.KeyUtil;
 public class SiteNavigationController {
 	private static final String CONTROLLER_MAPPING = "/management/site-navigation";
 	private static final String VIEW = "management/site-navigation";
+	private static final String CONFIRMATION_VIEW = "management/confirmation";
 	
 	@Autowired private SiteNavigationService siteNavigationService;
 
@@ -30,7 +31,7 @@ public class SiteNavigationController {
 	
 	@RequestMapping(value=CONTROLLER_MAPPING + "/add/{type}", method=RequestMethod.POST)
 	public ModelAndView addTopNavigation(@PathVariable ("type") String type, String title) {
-		ModelAndView modelAndView = new ModelAndView(VIEW);
+		ModelAndView modelAndView = new ModelAndView(CONFIRMATION_VIEW);
 		
 		SiteNavigation siteNavigation = new SiteNavigation();
 		siteNavigation.setKey(KeyUtil.buildKey(title));
@@ -39,7 +40,7 @@ public class SiteNavigationController {
 		siteNavigationService.saveSiteNavigation(siteNavigation);
 		
 		if (siteNavigation.getId() != null) {
-			modelAndView.addObject("addStatus", true);
+			modelAndView.addObject("siteNavigationConfirmation", true);
 		}
 		
 		return modelAndView;
@@ -47,10 +48,10 @@ public class SiteNavigationController {
 	
 	@RequestMapping(value=CONTROLLER_MAPPING + "/delete/{type}", method=RequestMethod.POST)
 	public ModelAndView deleteTopNavigation(@PathVariable ("type") String type, String key) {
-		ModelAndView modelAndView = new ModelAndView(VIEW);
+		ModelAndView modelAndView = new ModelAndView(CONFIRMATION_VIEW);
 		
 		if (siteNavigationService.deleteSiteNavigation(key)) {
-			modelAndView.addObject("deleteStatus", true);
+			modelAndView.addObject("siteNavigationConfirmation", true);
 		}
 		
 		return modelAndView;
