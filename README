@@ -5,3 +5,7 @@ This project provides the starting point for a GAE project based on SpringMVC wh
 
 This sample project can be seen running at http://arcotc-gae-samples.appspot.com/
 
+Things to do:
+1. implement dynamic navigation
+2. break pages into components
+3. load blog urls from database

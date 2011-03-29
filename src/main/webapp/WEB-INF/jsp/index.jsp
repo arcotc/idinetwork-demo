@@ -65,12 +65,12 @@
 			                    <td width="175"><table width="175" border="0" cellspacing="5" cellpadding="0">
 			                    	<c:forEach items="${articles}" var="article">
 				                      <tr>
-				                        <td class="style2"><a href="/site/article/${article.pageTitle}" class="style2">${article.title}</a></td>
+				                        <td class="style2"><a href="/site/article/${article.key}" class="style2">${article.title}</a></td>
 				                      </tr>
 				                      <tr>
 				                      	<td class="style4">
 				                      		${article.intro} 
-				                      		<a href="/site/article/${article.pageTitle}" class="style5">read more ...</a>
+				                      		<a href="/site/article/${article.key}" class="style5">read more ...</a>
 				                      	</td>
 				                      </tr>
 			                    	</c:forEach>

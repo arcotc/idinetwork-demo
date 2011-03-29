@@ -3,6 +3,7 @@ package uk.co.idinetwork.core.model;
 import java.util.Date;
 
 import siena.Model;
+import uk.co.idinetwork.core.utils.KeyUtil;
 
 public class Article extends Model implements Comparable<Article> {
 	private String id;
@@ -39,15 +40,7 @@ public class Article extends Model implements Comparable<Article> {
 	}
 
 	public void setKey(String key) {
-		String s = key.toLowerCase().replaceAll(" ", "-");
-		s = s.replaceAll("\"", "");
-		s = s.replaceAll("'", "");
-		s = s.replaceAll("!", "");
-		s = s.replaceAll(";", "");
-		s = s.replaceAll(",", "");
-		s = s.replaceAll("&", "");
-		
-		this.key = s;
+		this.key = KeyUtil.buildKey(key);
 	}
 	
 	public String getKey() {

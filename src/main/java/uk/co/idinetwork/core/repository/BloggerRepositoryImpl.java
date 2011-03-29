@@ -35,8 +35,6 @@ public class BloggerRepositoryImpl implements BloggerRepository {
 	
 	public BloggerRepositoryImpl() {
 		feedUrls.add("http://continuing-to-learning.blogspot.com/feeds/posts/default");
-		feedUrls.add("http://bisnis-x-2.blogspot.com/feeds/posts/default");
-		feedUrls.add("http://feeds.feedburner.com/AIGDaily?format=xml");
 	}
 	
 	@Override
