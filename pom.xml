@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>uk.co.idinetwork</groupId>
-	<artifactId>core</artifactId>
+	<artifactId>johnscottorn</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>Independent Driving Instructors Network - Core</name>
+	<name>Independent Driving Instructors Network - John Scottorn</name>
 
 	<properties>
 		<!-- This is just for "eclipse:eclipse" goal to always attempt downloading 
@@ -32,6 +32,11 @@
 	</pluginRepositories>
 
 	<dependencies>
+		<dependency>
+			<groupId>uk.co.idinetwork</groupId>
+			<artifactId>core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.transaction</groupId>
 			<artifactId>jta</artifactId>
