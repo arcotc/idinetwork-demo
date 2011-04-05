@@ -1,15 +1,29 @@
 package uk.co.idinetwork.core.model;
 
-public class Page {
-	private String name;
-	private String title;
+import siena.Id;
+import siena.Model;
+import siena.Query;
 
-	public String getName() {
-		return name;
+public class Page extends Model {
+	@Id private Long id;
+	private String key;
+	private String title;
+	private String body;
+
+	public Long getId() {
+		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	public String getKey() {
+		return key;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setKey(String key) {
+		this.key = key;
 	}
 
 	public String getTitle() {
@@ -18,5 +32,17 @@ public class Page {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	
+	public String getBody() {
+		return body;
+	}
+	
+	public void setBody(String body) {
+		this.body = body;
+	}
+
+	public static Query<Page> all() {
+		return all(Page.class);
 	}
 }

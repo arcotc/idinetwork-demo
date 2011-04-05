@@ -18,4 +18,6 @@
 	<bean id="instructorRepository" class="uk.co.idinetwork.core.repository.InstructorRepositoryImpl" />
 	<bean id="siteNavigationService" class="uk.co.idinetwork.core.service.SiteNavigationServiceImpl" />
 	<bean id="siteNavigationRepository" class="uk.co.idinetwork.core.repository.SiteNavigationRepositoryImpl" />
+	<bean id="pageService" class="uk.co.idinetwork.core.service.PageServiceImpl" />
+	<bean id="pageRepository" class="uk.co.idinetwork.core.repository.PageRepositoryImpl" />
 </beans>

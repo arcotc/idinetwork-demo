@@ -6,20 +6,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import uk.co.idinetwork.core.model.Page;
-
 @Controller
-public class FirstLevelPageController {
+public class FirstLevelPageController extends StandardController {
 	public static final String CONTROLLER_MAPPING = "/{page}";
-	
+
 	@RequestMapping(value=CONTROLLER_MAPPING, method=RequestMethod.GET)
 	public ModelAndView firstLevelPage(@PathVariable ("page") String page) {
-		Page sitePage = new Page();
+		ModelAndView modelAndView = new ModelAndView("firstLevelPage");
 		
-		sitePage.setName(page);
-		sitePage.setTitle(page);
+		loadPage(modelAndView, page);
+		loadArticles(modelAndView);
+		loadNavigation(modelAndView);
 		
-		return new ModelAndView("firstLevelPage", "page" , sitePage);
+		return modelAndView;
 	}
 	
 	@RequestMapping(value=CONTROLLER_MAPPING, method=RequestMethod.POST)

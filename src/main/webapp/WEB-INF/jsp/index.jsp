@@ -25,32 +25,9 @@
 		            <td><img src="/static/images/spacer.gif" width="1" height="27"></td>
 		          </tr>
 		          <tr>
-		            <td><table width="204" border="0" align="center" cellpadding="0" cellspacing="0">
-		              <tr>
-		                <td height="28" background="/static/images/button.gif" class="style1"><img src="/static/images/spacer.gif" width="27" height="1"><strong><a href="/site/about">About Us</a></strong></td>
-		              </tr>
-		              <tr>
-		                <td height="28" background="/static/images/button.gif" class="style1"><img src="/static/images/spacer.gif" width="27" height="1"><strong><a href="/site/corporate">Corporate</a></strong></td>
-		              </tr>
-		              <tr>
-		                <td height="28" background="/static/images/button.gif" class="style1"><img src="/static/images/spacer.gif" width="27" height="1"><strong><a href="/site/conferences">Conferences</a></strong></td>
-		              </tr>
-		              <tr>
-		                <td height="28" background="/static/images/button.gif" class="style1"><img src="/static/images/spacer.gif" width="27" height="1"><strong><a href="/site/tv-production">TV production</a></strong></td>
-		              </tr>
-		              <tr>
-		                <td height="28" background="/static/images/button.gif" class="style1"><img src="/static/images/spacer.gif" width="27" height="1"><strong><a href="/site/testimonials">Testimonials</a></strong></td>
-		              </tr>
-		              <tr>
-		                <td height="28" background="/static/images/button.gif" class="style1"><img src="/static/images/spacer.gif" width="27" height="1"><strong><a href="/site/contact">Contact Us</a></strong></td>
-		              </tr>
-		              <tr>
-		                <td height="28" background="/static/images/button.gif" class="style1"><img src="/static/images/spacer.gif" width="27" height="1"><strong><a href="/site/gallery">Gallery</a></strong></td>
-		              </tr>
-					  <tr>
-		            <td><img src="/static/images/spacer.gif" width="1" height="27"></td>
-		          	  </tr>
-		            </table></td>
+		            <td>
+		            	<jsp:include page="includes/side-navigation.jsp"/>
+					</td>
 		          </tr>
 		          <c:if test="${not empty articles}">
 			          <tr>
@@ -87,14 +64,9 @@
 		        </table></td>
 		        <td valign="top"><table width="496" border="0" cellspacing="0" cellpadding="0">
 		          <tr>
-		            <td><table width="496" border="0" cellspacing="0" cellpadding="0" bgcolor="#414141">
-		              <tr>
-		                <td width="279"><img src="/static/images/spacer.gif" width="1" height="45"></td>
-		                <td width="57"><a href="/"><span class="style3"><u>home</u></span></a></td>
-		                <td width="78"><a href="/"><span class="style3"><u>contact Us</u></span></a></td>
-		                <td width="82"><a href="/"><span class="style3"><u>site map</u></span></a></td>
-		              </tr>
-		            </table></td>
+		            <td>
+		            	<jsp:include page="includes/top-navigation.jsp"/>
+					</td>
 		          </tr>
 		          <tr>
 		            <td><img src="/static/images/header.jpg" width="496" height="175" border="0"></td>

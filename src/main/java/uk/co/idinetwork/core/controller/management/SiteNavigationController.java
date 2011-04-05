@@ -15,7 +15,7 @@ import uk.co.idinetwork.core.utils.KeyUtil;
 public class SiteNavigationController {
 	private static final String CONTROLLER_MAPPING = "/management/site-navigation";
 	private static final String VIEW = "management/site-navigation";
-	private static final String CONFIRMATION_VIEW = "management/confirmation";
+	private static final String CONFIRMATION_VIEW = "management/site-navigation-confirmation";
 	
 	@Autowired private SiteNavigationService siteNavigationService;
 
