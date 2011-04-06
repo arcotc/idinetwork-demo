@@ -12,6 +12,8 @@
 
 	<tx:annotation-driven />
 
+	<bean id="bloggerFeedService" class="uk.co.idinetwork.core.service.BloggerFeedServiceImpl" />
+	<bean id="bloggerFeedRepository" class="uk.co.idinetwork.core.repository.BloggerFeedRepositoryImpl" />
 	<bean id="bloggerService" class="uk.co.idinetwork.core.service.BloggerServiceImpl" />
 	<bean id="bloggerRepository" class="uk.co.idinetwork.core.repository.BloggerRepositoryImpl" />
 	<bean id="instructorService" class="uk.co.idinetwork.core.service.InstructorServiceImpl" />

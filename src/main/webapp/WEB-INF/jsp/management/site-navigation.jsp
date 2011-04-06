@@ -19,13 +19,22 @@
 							Top navigation has not been defined.
 						</c:when>
 						<c:otherwise>
-							<c:forEach items="${topSiteNavigation}" var="navigation">
-								<table>
+							<table>
+								<tr>
+									<td><b>Title</b></td>
+									<td></td>
+								</tr>
+								<c:forEach items="${topSiteNavigation}" var="navigation">
 									<tr>
 										<td>${navigation.title}</td>
+										<td>
+											<form action="/site/management/site-navigation/delete/top/${topSiteNavigation.id}" method="POST">
+												<input type="submit" value="delete"/>
+											</form>
+										</td>
 									</tr>
-								</table>
-							</c:forEach>
+								</c:forEach>
+							</table>
 						</c:otherwise>
 					</c:choose>
 					<br/>
@@ -41,13 +50,22 @@
 							Side navigation has not been defined.
 						</c:when>
 						<c:otherwise>
-							<c:forEach items="${sideSiteNavigation}" var="navigation">
-								<table>
+							<table>
+								<tr>
+									<td><b>Title</b></td>
+									<td></td>
+								</tr>
+								<c:forEach items="${sideSiteNavigation}" var="navigation">
 									<tr>
 										<td>${navigation.title}</td>
+										<td>
+											<form action="/site/management/site-navigation/delete/side/${topSiteNavigation.id}" method="POST">
+												<input type="submit" value="delete"/>
+											</form>
+										</td>
 									</tr>
-								</table>
-							</c:forEach>
+								</c:forEach>
+							</table>
 						</c:otherwise>
 					</c:choose>
 					<br/>

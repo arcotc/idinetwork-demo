@@ -8,6 +8,7 @@
 	<head>
 		<title>${article.title} | johnscottorn.co.uk</title>
 		<link rel="stylesheet" href="/static/styles/johnscottern.css" type="text/css">
+       	<jsp:include page="includes/meta-tags.jsp"/>
 	</head>
 	<body>
 		<table width="765" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -16,7 +17,7 @@
 		      <tr>
 		        <td valign="top"><table width="269" border="0" cellspacing="0" cellpadding="0">
 		          <tr>
-		            <td><a href="/"><img src="/static/images/title.gif" width="269" height="119" border="0"></a></td>
+		          	<jsp:include page="includes/logo.jsp"/>
 		          </tr>
 		          <tr>
 		            <td><img src="/static/images/spacer.gif" width="1" height="27"></td>
@@ -101,13 +102,8 @@
 		  </tr>
 		  <tr>
 		    <td>
-		      <table width="766" border="0" cellspacing="0" cellpadding="0">
-		        <tr>
-		          <td width="421" align="left" class="style1"><a href="/site//" style="cursor:default ">&copy; copyright 2006</a></td>
-				  <td width="10"><img src="/static/images/spacer.gif" width="1" height="20"><a href="/"><img src="/static/images/spacer.gif" width="1" height="1" border="0"></a></td>
-		          <td width="335" align="right" class="style1"> <a href="/site//">Web Design  by TemplatesFreeLance.Com</a></td>
-		        </tr>
-		      </table><a href="/"><img src="/static/images/spacer.gif" width="1" height="1" border="0"></a></td>
+		    	<jsp:include page="includes/footer.jsp"/>
+			</td>
 		  </tr>
 		</table>
 		<a href="/"><img src="/static/images/spacer.gif" width="1" height="1" border="0"></a>

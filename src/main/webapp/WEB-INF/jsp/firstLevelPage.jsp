@@ -8,6 +8,7 @@
 	<head>
 		<title>${page.title} | johnscottorn.co.uk</title>
 		<link rel="stylesheet" href="/static/styles/johnscottern.css" type="text/css">
+       	<jsp:include page="includes/meta-tags.jsp"/>
 	</head>
 	<body>
 		<table width="765" border="0" align="center" cellpadding="0" cellspacing="0">

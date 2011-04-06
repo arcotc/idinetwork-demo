@@ -6,12 +6,12 @@
 
 <html>
 	<head>
-		<title>Management | Page | Confirmation</title>
+		<title>Management | Blogger | Confirmation</title>
 	</head>
 	<body>
-		<h1>Page</h1>
+		<h1>Blogger</h1>
 		<c:choose>
-			<c:when test="${pageConfirmation == 'true'}">
+			<c:when test="${bloggerConfirmation == 'true'}">
 				Your change has been applied.
 			</c:when>
 			<c:otherwise>
@@ -19,6 +19,6 @@
 			</c:otherwise>
 		</c:choose>
 		<br/>
-		Return to <a href="/site/management/page">page management</a> | <a href="/site/management">management</a>.
+		Return to <a href="/site/management">management</a>.
 	</body>
 </html>

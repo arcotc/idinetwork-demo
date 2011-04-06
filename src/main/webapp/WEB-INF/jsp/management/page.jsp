@@ -18,19 +18,35 @@
 							No pages have been defined.
 						</c:when>
 						<c:otherwise>
-							<c:forEach items="${pages}" var="page">
-								<table>
+							<table>
+								<tr>
+									<td><b>Title</b></td>
+									<td><b>Link Title</b></td>
+									<td></td>
+								</tr>
+								<c:forEach items="${pages}" var="page">
 									<tr>
 										<td>${page.title}</td>
+										<td>${page.key}</td>
+										<td>
+											<form action="/site/management/page/delete/${page.id}" method="POST">
+												<input type="submit" value="delete"/>
+											</form>
+										</td>
 									</tr>
-								</table>
-							</c:forEach>
+								</c:forEach>
+							</table>
 						</c:otherwise>
 					</c:choose>
 					<br/>
 					<form method="post" action="/site/management/page/add">
 						Title: <input type="text" name="title"/><br/>
-						<textarea rows="10" cols="40" name="body"></textarea>
+						Link: <input type="text" name="linkTitle"/></br>
+						Body:<br/>
+						<textarea rows="10" cols="40" name="body"></textarea><br/>
+						Meta Description:<br/>
+						<textarea rows="3" cols="40" name="metaDescription"></textarea><br/>
+						Meta Keywords: <input type="text" name="metaKeywords"/><br/>
 						<input type="submit" value="Add"/>
 					</form>
 				</td>

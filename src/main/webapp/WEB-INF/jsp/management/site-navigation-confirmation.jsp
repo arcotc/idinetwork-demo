@@ -19,6 +19,6 @@
 			</c:otherwise>
 		</c:choose>
 		<br/>
-		Return to <a href="/site/management/site-navigation">site navigation management</a>.
+		Return to <a href="/site/management/site-navigation">site navigation management</a> | <a href="/site/management">management</a>.
 	</body>
 </html>
