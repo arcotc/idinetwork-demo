@@ -29,6 +29,9 @@
 										<td>${page.title}</td>
 										<td>${page.key}</td>
 										<td>
+											<form action="/site/management/page/edit/${page.id}" method="GET">
+												<input type="submit" value="edit"/>
+											</form>
 											<form action="/site/management/page/delete/${page.id}" method="POST">
 												<input type="submit" value="delete"/>
 											</form>
