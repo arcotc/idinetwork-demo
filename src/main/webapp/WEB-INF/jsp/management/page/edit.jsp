@@ -37,6 +37,7 @@
 								Meta Description:<br/>
 								<textarea rows="3" cols="40" name="metaDescription">${page.metaDescription}</textarea><br/>
 								Meta Keywords: <input type="text" name="metaKeywords" value="${page.metaKeywords}"/><br/>
+								Blogger Tags: <input type="text" name="tags" value="${page.tags}"/><br/>
 								<input type="submit" value="save"/>
 							</form>
 						</c:otherwise>

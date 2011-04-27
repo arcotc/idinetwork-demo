@@ -1,6 +1,7 @@
 <!-- Start of main-body -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://idinetwork.co.uk/taglibs/idinetwork" prefix="idi"%>
 <table width="445" border="0" align="left" cellpadding="0" cellspacing="0">
 <c:if test="${not empty page}">
   <tr>
@@ -14,7 +15,15 @@
   </tr>
   <tr>
     <td class="bodyText">
-    	${page.body}
+      ${page.body}
+      <c:if test="${not empty page.tags}">
+	    <idi:articlesTag tags="${page.tags}" name="pageArticles"/>
+	    <ul>
+        <c:forEach items="${pageArticles}" var="article" varStatus="loopStatus">
+	        <li><a href="/site/article/${article.key}" class="style2">${article.title}</a></li>
+       	</c:forEach>
+	    </ul>
+  </c:if>
     </td>
   </tr>
 </c:if>

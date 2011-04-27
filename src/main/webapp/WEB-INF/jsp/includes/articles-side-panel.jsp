@@ -14,7 +14,7 @@
          <tr>
            <td width="25"><img src="/static/images/spacer.gif" width="20" height="8"></td>
            <td width="175"><table width="175" border="0" cellspacing="5" cellpadding="0">
-           	<c:forEach items="${articles}" var="article" varStatus="loopStatus">
+           	  <c:forEach items="${articles}" var="article" varStatus="loopStatus">
            		<c:if test="${loopStatus.count < 4}">
 	              <tr>
 	                <td class="style2"><a href="/site/article/${article.key}" class="style2">${article.title}</a></td>

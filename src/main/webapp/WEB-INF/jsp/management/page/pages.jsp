@@ -61,6 +61,7 @@
 						Meta Description:<br/>
 						<textarea rows="3" cols="40" name="metaDescription"></textarea><br/>
 						Meta Keywords: <input type="text" name="metaKeywords"/><br/>
+						Blogger Tags: <input type="text" name="tags"/><br/>
 						<input type="submit" value="add"/>
 					</form>
 				</td>
