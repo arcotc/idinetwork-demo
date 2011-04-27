@@ -6,7 +6,13 @@
 
 <html>
 	<head>
-		<title>${page.title} | johnscottorn.co.uk</title>
+		<title>
+			<c:choose>
+				<c:when test="${not empty page}">${page.title} | </c:when>
+				<c:when test="${not empty article}">${article.title} | </c:when>
+			</c:choose>
+		 	johnscottorn.co.uk
+		</title>
 		<link rel="stylesheet" href="/static/styles/johnscottern.css" type="text/css">
        	<jsp:include page="includes/meta-tags.jsp"/>
 	</head>

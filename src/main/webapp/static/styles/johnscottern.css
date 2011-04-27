@@ -47,7 +47,7 @@ a:active {
 	font-family: tahoma;
 	font-style: italic;
 	position:absolute;
-	left:361px;
+/*	left:280px;*/
 	top:43px;
 }
 
@@ -56,6 +56,14 @@ a:active {
 	font-size: 14px;
 	font-family: tahoma;
 	position:absolute;
-	left:361px;
+/*	left:310px;*/
 	top:77px;
+}
+
+.bodyText {
+	color: #414141;
+}
+
+.bodyText a {
+	color: #414141;
 }

@@ -1,3 +1,4 @@
+<!-- Start of top-navigation -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <table width="496" border="0" cellspacing="0" cellpadding="0" bgcolor="#414141">
@@ -8,3 +9,4 @@
    </c:forEach>
   </tr>
 </table>
+<!-- End of top-navigation -->

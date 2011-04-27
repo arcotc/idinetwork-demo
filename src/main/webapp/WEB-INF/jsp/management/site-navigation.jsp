@@ -12,7 +12,7 @@
 		<h1>Site Navigation</h1>
 		<table>
 			<tr>
-				<td width="50%">
+				<td width="50%" valign="top">
 					<h2>Top Navigation</h2>
 					<c:choose>
 						<c:when test="${empty topSiteNavigation}">
@@ -28,7 +28,7 @@
 									<tr>
 										<td>${navigation.title}</td>
 										<td>
-											<form action="/site/management/site-navigation/delete/top/${topSiteNavigation.id}" method="POST">
+											<form action="/site/management/site-navigation/delete/top/${navigation.id}" method="POST">
 												<input type="submit" value="delete"/>
 											</form>
 										</td>
@@ -43,7 +43,7 @@
 						<input type="submit" value="Add"/>
 					</form>
 				</td>
-				<td width="50%">
+				<td width="50%" valign="top">
 					<h2>Side Navigation</h2>
 					<c:choose>
 						<c:when test="${empty sideSiteNavigation}">
@@ -59,7 +59,7 @@
 									<tr>
 										<td>${navigation.title}</td>
 										<td>
-											<form action="/site/management/site-navigation/delete/side/${topSiteNavigation.id}" method="POST">
+											<form action="/site/management/site-navigation/delete/side/${navigation.id}" method="POST">
 												<input type="submit" value="delete"/>
 											</form>
 										</td>

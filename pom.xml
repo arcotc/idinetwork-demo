@@ -20,7 +20,7 @@
 		<jettyVersion>7.2.0.v20101020</jettyVersion>
 
 		<!--gae.home>/home/mhunter/appengine-java-sdk-1.4.0/</gae.home -->
-		<gae.home>d:/java/appengine-java-sdk-1.4.2/</gae.home>
+		<gae.home>d:/java/appengine-java-sdk-1.4.3/</gae.home>
 	</properties>
 
 	<pluginRepositories>
@@ -171,7 +171,7 @@
 		<dependency>
 			<groupId>com.google.appengine</groupId>
 			<artifactId>appengine-api-1.0-sdk</artifactId>
-			<version>1.4.2</version>
+			<version>1.4.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.tuckey</groupId>
