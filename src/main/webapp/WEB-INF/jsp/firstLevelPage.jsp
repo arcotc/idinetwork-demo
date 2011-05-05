@@ -4,64 +4,90 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 
-<html>
-	<head>
-		<title>
-			<c:choose>
-				<c:when test="${not empty page}">${page.title} | </c:when>
-				<c:when test="${not empty article}">${article.title} | </c:when>
-			</c:choose>
-		 	johnscottorn.co.uk
-		</title>
-		<link rel="stylesheet" href="/static/styles/johnscottern.css" type="text/css">
-       	<jsp:include page="includes/meta-tags.jsp"/>
-	</head>
-	<body>
-		<table width="765" border="0" align="center" cellpadding="0" cellspacing="0">
-		  <tr>
-		    <td><table width="765" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
-		      <tr>
-		        <td valign="top"><table width="269" border="0" cellspacing="0" cellpadding="0">
-		          <tr>
-		          	<jsp:include page="includes/logo.jsp"/>
-		          </tr>
-		          <tr>
-		            <td><img src="/static/images/spacer.gif" width="1" height="27"></td>
-		          </tr>
-		          <tr>
-		            <td>
-		            	<jsp:include page="includes/side-navigation.jsp"/>
-		            </td>
-		          </tr>
-		          <jsp:include page="includes/articles-side-panel.jsp"/>
-		        </table></td>
-		        <td valign="top"><table width="496" border="0" cellspacing="0" cellpadding="0">
-		          <tr>
-		            <td>
-		            	<jsp:include page="includes/top-navigation.jsp"/>
-		            </td>
-		          </tr>
-		          <tr>
-		            <td><a href="/"><img src="/static/images/header.jpg" width="496" height="175" border="0"></a></td>
-		          </tr>
-		          <tr>
-		            <td>
-		            	<jsp:include page="includes/main-body.jsp"/>
-		            </td>
-		          </tr>
-				  </table></td>
-		      </tr>
-		    </table></td>
-		  </tr>
-		  <tr>
-		    <td><a href="/"><img src="/static/images/footer.gif" width="765" height="22" border="0"></a></td>
-		  </tr>
-		  <tr>
-		    <td>
-		    	<jsp:include page="includes/footer.jsp"/>
-			</td>
-		  </tr>
-		</table>
-		<a href="/"><img src="/static/images/spacer.gif" width="1" height="1" border="0"></a>
-	</body>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" type="text/css" media="screen,projection" href="/static/styles/style_screen.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/static/styles/style_print.css" />
+  <jsp:include page="includes/meta-tags.jsp"/>
+  <title>
+	<c:choose>
+		<c:when test="${not empty page}">${page.title} | </c:when>
+		<c:when test="${not empty article}">${article.title} | </c:when>
+	</c:choose>
+ 	stewartlancasterdrivingschool.co.uk
+  </title>
+</head>
+
+<body>
+  <div class="page-container-3">
+
+  	<!-- HEADER -->
+	<jsp:include page="includes/navigation1.jsp"/>
+
+    <!-- Sitename -->
+		<div class="site-name">
+      <p class="title"><a href="index.html">Stewart&bull;Lancaster</a></p>
+      <p class="subtitle"><a href="index.html">Driving&bull;School</a></p>
+    </div>
+    
+    <!-- Site slogan -->
+		<div class="site-slogan-container">
+			<div class="site-slogan">
+      	<p class="title">Helping you reach</p>
+      	<p class="title">your full potential</p>
+      	<!--p class="subtitle">reach you potential</p-->
+      	<!--p class="text">Serving the webcommunity<br />with XHTML/CSS designs</p>
+        <p class="readmore">&rsaquo;&rsaquo;&rsaquo;&nbsp;<a href="/site/about">Find out more about us</a></p-->
+      </div>
+		</div>
+    		 						    		 						
+    <!-- Header banner -->		 						    		 						
+		<div><img class="img-header" src="/static/images/header.jpg" alt=""/></div>		
+
+	<jsp:include page="includes/navigation2.jsp"/>
+    
+    <!-- Buffer after header -->    
+		<div class="buffer"></div>
+		
+  	<!-- 	CONTENT -->
+		<div class="content3">
+
+	<jsp:include page="includes/mainbody.jsp"/>
+
+      <!-- Text container -->
+			<!--div class="content3-container">
+				<div class="content3-container-3col-left">
+					<p class="content-title-noshade-size3">Lorem Ipsum</p>
+					<p class="content-subtitle-noshade-size1">Lorem Ipsum</p>
+					<div class="content-txtbox-noshade">
+						<p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod.</p>
+					</div>
+				</div>
+			
+				<div class="content3-container-3col-middle">
+					<p class="content-title-noshade-size3">Lorem Ipsum</p>
+					<p class="content-subtitle-noshade-size1">Lorem Ipsum</p>
+					<div class="content-txtbox-noshade">
+						<p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod.</p>			 
+					</div>
+        </div>
+
+				<div class="content3-container-3col-right">
+					<p class="content-title-noshade-size3">Lorem Ipsum</p>
+					<p class="content-subtitle-noshade-size1">Lorem Ipsum</p>
+					<div class="content-txtbox-noshade">
+						<p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod.</p>
+					</div>
+				</div>
+      </div-->
+    </div>
+			
+	  <jsp:include page="includes/sidebar.jsp"/>
+
+	  <jsp:include page="includes/footer.jsp"/>
+				
+  </div>
+</body>
 </html>
