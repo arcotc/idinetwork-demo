@@ -36,11 +36,11 @@
       </div>
 </c:if>
 <c:if test="${not empty page.tags}">
-  <idi:articlesTag tags="${page.tags}" name="pageArticles"/>
+    <idi:articlesTag tags="${page.tags}" name="pageArticles" maxItems="2"/>
 	<!-- Text container -->
 	<div class="content3-container line-box">
         <c:forEach items="${pageArticles}" var="article" varStatus="loopStatus">
-          <c:if test="${loopStatus.index == 1}">
+          <c:if test="${loopStatus.count == 1}">
 			<div class="content3-container-2col-left">
 			  <p class="content-title-noshade-size3">${article.title}</p>
 			  <!--p class="content-subtitle-noshade-size1">${article.intro}</p-->
@@ -51,7 +51,7 @@
 			</div>
 		  </c:if>
 
-          <c:if test="${loopStatus.index == 2}">
+          <c:if test="${loopStatus.count == 2}">
 			<div class="content3-container-2col-right">
 			  <p class="content-title-noshade-size3">${article.title}</p>
 			  <!--p class="content-subtitle-noshade-size1">${article.intro}</p-->
@@ -63,4 +63,41 @@
 		  </c:if>
 		</c:forEach>		
 	</div>
+
+		<div class="content3-container">
+          <c:forEach items="${pageArticles}" var="article" varStatus="loopStatus">
+            <c:if test="${loopStatus.count == 3}">
+              <div class="content3-container-3col-left">
+			    <p class="content-title-noshade-size3">${article.title}</p>
+				<!--p class="content-subtitle-noshade-size1">${article.intro}</p-->
+				<div class="content-txtbox-noshade">
+				<p><c:out value="${fn:substring(article.copy,0,200)}"/>...</p>
+                &rsaquo;&rsaquo;&rsaquo;&nbsp;<a href="/site/article/${article.key}">read more ...</a>
+				</div>
+			  </div>
+		    </c:if>
+
+            <c:if test="${loopStatus.count == 4}">
+              <div class="content3-container-3col-middle">
+			    <p class="content-title-noshade-size3">${article.title}</p>
+				<!--p class="content-subtitle-noshade-size1">${article.intro}</p-->
+				<div class="content-txtbox-noshade">
+				<p><c:out value="${fn:substring(article.copy,0,200)}"/>...</p>
+                &rsaquo;&rsaquo;&rsaquo;&nbsp;<a href="/site/article/${article.key}">read more ...</a>
+				</div>
+			  </div>
+		    </c:if>
+
+            <c:if test="${loopStatus.count == 5}">
+              <div class="content3-container-3col-right">
+			    <p class="content-title-noshade-size3">${article.title}</p>
+				<!--p class="content-subtitle-noshade-size1">${article.intro}</p-->
+				<div class="content-txtbox-noshade">
+				<p><c:out value="${fn:substring(article.copy,0,200)}"/>...</p>
+                &rsaquo;&rsaquo;&rsaquo;&nbsp;<a href="/site/article/${article.key}">read more ...</a>
+				</div>
+			  </div>
+		    </c:if>
+		  </c:forEach>		
+	    </div>
 </c:if>

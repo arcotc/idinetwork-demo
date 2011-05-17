@@ -23,12 +23,14 @@
 								<tr>
 									<td><b>Name</b></td>
 									<td><b>Feed URL</b></td>
+									<td><b>Default Feed</b></td>
 									<td>&nbsp;</td>
 								</tr>
 								<c:forEach items="${bloggerFeeds}" var="bloggerFeed">
 									<tr>
 										<td>${bloggerFeed.name}</td>
 										<td>${bloggerFeed.feedUrl}</td>
+										<td><c:if test="${bloggerFeed.defaultFeed}">default</c:if></td>
 										<td>
 											<form action="/site/management/blogger-feed/delete/${bloggerFeed.id}" method="POST">
 												<input type="submit" value="delete"/>
@@ -43,6 +45,7 @@
 					<form method="post" action="/site/management/blogger-feed/add">
 						Name: <input type="text" name="name"/><br/>
 						Feed URL: <input type="text" name="feedUrl"/></br>
+						Default Feed: Yes <input type="radio" name="defaultFeed" value="true"/> / No <input type="radio" name="defaultFeed" value="false"/></br>
 						<input type="submit" value="Add"/>
 					</form>
 				</td>

@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://idinetwork.co.uk/taglibs/idinetwork" prefix="idi"%>
-<idi:articlesTag tags="news"/>
+<idi:articlesTag tags="news" maxItems="4"/>
 <c:if test="${not empty articles}">
     <!-- SIDEBAR -->		
 	  <div class="sidebar">
