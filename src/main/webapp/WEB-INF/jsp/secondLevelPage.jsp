@@ -29,12 +29,8 @@
 	
 		<jsp:include page="includes/topnavbar.jsp"/>
 
-		<div id="primarycontent">
+		<div class="primarycontent wide">
 			<jsp:include page="includes/mainbody.jsp"/>
-		</div>
-		
-		<div id="secondarycontent">
-			<jsp:include page="includes/sidebar.jsp"/>
 		</div>
 	
 		<div id="footer">

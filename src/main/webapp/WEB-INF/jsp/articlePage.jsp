@@ -30,11 +30,11 @@
 		<jsp:include page="includes/topnavbar.jsp"/>
 
 		<div id="primarycontent">
-			<jsp:include page="includes/mainbody.jsp"/>
+			<jsp:include page="includes/mainbody2.jsp"/>
 		</div>
 		
 		<div id="secondarycontent">
-			<jsp:include page="includes/sidebar.jsp"/>
+			<jsp:include page="includes/sidebar2.jsp"/>
 		</div>
 	
 		<div id="footer">

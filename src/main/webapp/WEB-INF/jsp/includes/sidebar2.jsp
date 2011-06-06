@@ -1,12 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://idinetwork.co.uk/taglibs/idinetwork" prefix="idi"%>
-<idi:articlesTag tags="news" maxItems="4"/>
+<idi:articlesTag tags="${article.tags}" maxItems="4"/>
 <c:if test="${not empty articles}">
 
-		<h3>Latest News</h3>
+		<h3>Related</h3>
 		<c:set var="topItems" value="2"/>
-		<c:set var="maxItems" value="8"/>
 	 	<c:forEach items="${articles}" var="article" varStatus="loopStatus">
 	 	    <c:if test="${loopStatus.count <= topItems}">
 				<div class="content">

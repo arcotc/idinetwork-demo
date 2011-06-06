@@ -3,37 +3,40 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="http://idinetwork.co.uk/taglibs/idinetwork" prefix="idi"%>
 <c:if test="${not empty page}">
-  	  <!-- Page title -->		
-		  <div class="content3-pagetitle">${page.title}</div>			
-                				
-			<!-- Text container -->
-			<div class="content3-container line-box">
-				<div class="content3-container-1col">
-					<!--p class="content-title-noshade-size3">Basic overview</p>                            
-					<p class="content-subtitle-noshade-size1">Experience freedom</p-->
-        	<div class="content-txtbox-noshade">
-        		<c:if test="${page.key == 'home'}">
-        			<img src="/static/images/logo.png" align="left"/>
-        		</c:if>
-          		${page.body}
-					</div>
+			<div class="post">
+				<div class="header">
+					<h3>${page.title}</h3>
+					<div class="date"></div>
 				</div>
-      </div>
+				<div class="content">
+					${page.body}
+				</div>			
+				<div class="footer">
+					<!--ul>
+						<li class="printerfriendly"><a href="#">Printer Friendly</a></li>
+						<li class="comments"><a href="#">Comments (18)</a></li>
+						<li class="readmore"><a href="#">Read more</a></li>
+					</ul-->
+				</div>
+			</div>
 </c:if>
 <c:if test="${not empty article}">
-  	  <!-- Page title -->		
-		  <div class="content3-pagetitle">${article.title}</div>			
-                				
-			<!-- Text container -->
-			<div class="content3-container line-box">
-				<div class="content3-container-1col">
-					<!--p class="content-title-noshade-size3">Basic overview</p>                            
-					<p class="content-subtitle-noshade-size1">Experience freedom</p-->
-        	<div class="content-txtbox-noshade">
-          		<span class="standard-font">${article.copy}</span>
-					</div>
+			<div class="post">
+				<div class="header">
+					<h3>${article.title}</h3>
+					<div class="date"></div>
 				</div>
-      </div>
+				<div class="content">
+					<p>${article.copy}</p>
+				</div>			
+				<div class="footer">
+					<!--ul>
+						<li class="printerfriendly"><a href="#">Printer Friendly</a></li>
+						<li class="comments"><a href="#">Comments (18)</a></li>
+						<li class="readmore"><a href="#">Read more</a></li>
+					</ul-->
+				</div>
+			</div>
 </c:if>
 <c:if test="${not empty page.tags}">
     <idi:articlesTag tags="${page.tags}" name="pageArticles" maxItems="2"/>
