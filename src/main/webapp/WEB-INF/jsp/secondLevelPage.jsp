@@ -29,7 +29,7 @@
 	
 		<jsp:include page="includes/topnavbar.jsp"/>
 
-		<div class="primarycontent wide">
+		<div id="primarycontent-wide">
 			<jsp:include page="includes/mainbody.jsp"/>
 		</div>
 	

@@ -1,6 +1,6 @@
 		<div id="header">
-			<h1><span>IDINetwork</span></h1>
-			<h2>Demonstration</h2>
+			<span class="line1">IDINetwork</span><br/>
+			<span class="line2">Demonstration</span>
 		</div>
 	
 		<div id="splash"></div>
